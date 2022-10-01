@@ -27,6 +27,10 @@ body {
     min-height:80px;
     min-width:80px;
     border-radius:10px;
+    font-size:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 .display {
     border-radius:10px;
