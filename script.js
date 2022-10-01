@@ -1,3 +1,5 @@
+/* Math Functions */
+
 const add = (firstNumberToAdd, secondNumberToAdd) => {
     return firstNumberToAdd + secondNumberToAdd;
 }
@@ -26,4 +28,13 @@ const operate = (firstOperand, operator, secondOperand) => {
     }
 };
 
-console.log(operate(2, "*", 10));
+/* Event Listeners */
+
+const numbers = document.querySelectorAll("[date-number]");
+const display = document.querySelector(".display");
+
+numbers.forEach(button => {
+    button.addEventListener("click", (e) => {
+        display.textContent = button.innerText;
+    })
+});
