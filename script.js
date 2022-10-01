@@ -24,6 +24,6 @@ const operate = (firstOperand, operator, secondOperand) => {
     } else if (operator == "/") {
         return divide(firstOperand, secondOperand);
     }
-}
+};
 
 console.log(operate(2, "*", 10));

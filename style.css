@@ -3,3 +3,9 @@
     margin: 0;
     padding: 0;
 }
+
+.calculator {
+    width:65vw;
+    border:1px solid black;
+    height:75vh;
+}
