@@ -27,4 +27,5 @@ body {
     border:1px solid black;
     width:40vw;
     height:40px;
+    grid-column: span 3;
 }
