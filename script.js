@@ -41,12 +41,12 @@ const equals = document.getElementById("equal");
   //  })
 //});
 
-let firstValue = 0;
-let opValue = "";
 
-numbers.forEach(button => {
+
+
+    numbers.forEach(button => {
     button.addEventListener("click", (e) => {
-        let firstValue = e.target.innerText;
+        firstValue = e.target.innerText;
         console.log(firstValue);
         display.textContent = button.innerText;
     })
@@ -54,12 +54,12 @@ numbers.forEach(button => {
 
 operators.forEach(operator => {
     operator.addEventListener("click", (e) => {
-        let opValue = e.target.innerText;
+        opValue = e.target.innerText;
         console.log(opValue);
 
     })
 });
 
 equals.addEventListener("click", (e) => {
-    console.log(operate(firstValue, opValue, ));
+    console.log(operate(parseInt(firstValue), opValue, 2  ));
 })
