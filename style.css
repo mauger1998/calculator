@@ -16,3 +16,8 @@ body {
     border:1px solid black;
     height:75vh;
 }
+.button {
+    border: 1px solid black;
+    height:40px;
+    width:40px;
+}
