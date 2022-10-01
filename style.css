@@ -53,3 +53,12 @@ body {
 .equal {
     background-color:orange;
 }
+
+.clear {
+    grid-column:span 3;
+    padding:8px;
+    border-radius:10px;
+    background-color:orange;
+    color:white;
+    font-size:40px;
+}
