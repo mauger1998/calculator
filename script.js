@@ -33,13 +33,16 @@ const operate = (firstOperand, operator, secondOperand) => {
 const numbers = document.querySelectorAll("[date-number]");
 const display = document.querySelector(".display");
 const operators = document.querySelectorAll("[data-operation]")
-
+const equals = document.getElementById("equal");
 
 //operators.forEach(operator => {
    // operator.addEventListener("click", (e) => {
     //    display.textContent = operator.innerText;
   //  })
 //});
+
+let firstValue = 0;
+let opValue = "";
 
 numbers.forEach(button => {
     button.addEventListener("click", (e) => {
@@ -53,6 +56,10 @@ operators.forEach(operator => {
     operator.addEventListener("click", (e) => {
         let opValue = e.target.innerText;
         console.log(opValue);
-        
+
     })
+});
+
+equals.addEventListener("click", (e) => {
+    console.log(operate(firstValue, opValue, ));
 })
