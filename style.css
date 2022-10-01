@@ -44,3 +44,7 @@ body {
     grid-column: span 3;
     background-color:rgb(104, 100, 100);
 }
+
+.equal {
+    background-color:orange;
+}
