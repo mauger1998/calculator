@@ -32,6 +32,14 @@ const operate = (firstOperand, operator, secondOperand) => {
 
 const numbers = document.querySelectorAll("[date-number]");
 const display = document.querySelector(".display");
+const operators = document.querySelectorAll("[data-operation]")
+
+
+//operators.forEach(operator => {
+   // operator.addEventListener("click", (e) => {
+    //    display.textContent = operator.innerText;
+  //  })
+//});
 
 numbers.forEach(button => {
     button.addEventListener("click", (e) => {
