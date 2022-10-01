@@ -22,7 +22,7 @@ body {
     padding-top:25px;
     border-radius:10px;
     padding:25px;
-    background-color:black;
+    background-color:rgb(33, 32, 32);
     color:white;
 
 }
@@ -43,6 +43,10 @@ body {
     min-height:60px;
     grid-column: span 3;
     background-color:rgb(104, 100, 100);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:40px;
 }
 
 .equal {
