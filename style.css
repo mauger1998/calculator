@@ -37,6 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color:rgb(104, 100, 100);
+    color:white;
 }
 .display {
     border-radius:10px;
