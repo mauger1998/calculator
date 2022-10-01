@@ -43,6 +43,8 @@ const operators = document.querySelectorAll("[data-operation]")
 
 numbers.forEach(button => {
     button.addEventListener("click", (e) => {
+        let firstValue = e.target.innerText;
+        console.log(firstValue);
         display.textContent = button.innerText;
     })
 });
