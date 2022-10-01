@@ -48,3 +48,11 @@ numbers.forEach(button => {
         display.textContent = button.innerText;
     })
 });
+
+operators.forEach(operator => {
+    operator.addEventListener("click", (e) => {
+        let opValue = e.target.innerText;
+        console.log(opValue);
+        
+    })
+})
