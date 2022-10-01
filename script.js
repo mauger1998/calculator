@@ -8,7 +8,10 @@ const subtract = (firstNumberToSubtract, secondNumberToSubtract) => {
 
 const multiply = (firstNumberToTimes, secondNumberToTimes) => {
     return firstNumberToTimes * secondNumberToTimes;
-
 }
 
-console.log(multiply(10,10))
+const divide = (firstNumberToDivide, secondNumberToDivide) => {
+    return firstNumberToDivide / secondNumberToDivide;
+}
+
+console.log(divide(100,10))
