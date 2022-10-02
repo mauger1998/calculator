@@ -35,6 +35,7 @@ const display = document.querySelector(".display");
 const operators = document.querySelectorAll("[data-operation]")
 const equals = document.getElementById("equal");
 
+
 //operators.forEach(operator => {
    // operator.addEventListener("click", (e) => {
     //    display.textContent = operator.innerText;
@@ -66,9 +67,7 @@ let userIsStillTyping = false;
 
 
 
-while (userIsStillTyping == true) {
 
-}
 
 operators.forEach(operator => {
     operator.addEventListener("click", (e) => {
@@ -81,5 +80,6 @@ operators.forEach(operator => {
 });
 
 equals.addEventListener("click", (e) => {
+    userIsStillTyping = false;
     display.textContent = operate(parseInt(firstValue), opValue, parseInt(secondValue));
 });
