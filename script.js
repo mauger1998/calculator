@@ -43,19 +43,36 @@ const equals = document.getElementById("equal");
 let firstValue = 0;
 let secondValue = 0;
 let opValue = 0;
+let userIsStillTyping = false;
 
 
   
     numbers.forEach(button => {
     button.addEventListener("click", (e) => {
-        firstValue = e.target.innerText;
-        console.log(firstValue);
-        display.textContent = button.innerText;
+        if (userIsStillTyping == false) {
+            firstValue = e.target.innerText;
+            console.log(firstValue);
+            display.textContent = button.innerText;
+            userIsStillTyping = true;
+        } else  if (userIsStillTyping == true) {
+            firstValue += e.target.innerText;
+            display.textContent += button.innerText;
+        }
+        
+        
     })
 });
 
+
+
+
+while (userIsStillTyping == true) {
+
+}
+
 operators.forEach(operator => {
     operator.addEventListener("click", (e) => {
+        userIsStillTyping = false;
         opValue = e.target.innerText;
         secondValue = firstValue;
         console.log(opValue);
