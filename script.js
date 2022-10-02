@@ -86,5 +86,9 @@ equals.addEventListener("click", (e) => {
 
 clear.addEventListener("click", (e) => {
     display.textContent = "_";
+    userIsStillTyping = false;
+    firstValue = 0;
+    secondValue = 0;
+    opValue = 0;
     
-})
+});
