@@ -71,7 +71,7 @@ operators.forEach(operator => {
     operator.addEventListener("click", (e) => {
         if (firstValue != null && secondValue != null) {
             userIsStillTyping = false;
-            display.textContent = operate(parseInt(firstValue), opValue, parseInt(secondValue));
+            display.textContent = operate(parseInt(secondValue), opValue, parseInt(firstValue));
             
             secondValue = parseInt(display.textContent);
             opValue = e.target.innerText
@@ -92,7 +92,7 @@ operators.forEach(operator => {
 /*Equals Button*/
 equals.addEventListener("click", (e) => {
     userIsStillTyping = false;
-    display.textContent = operate(parseInt(firstValue), opValue, parseInt(secondValue));
+    display.textContent = operate(parseInt(secondValue), opValue, parseInt(firstValue));
 });
 
 /*Clear Button*/
@@ -105,3 +105,4 @@ clear.addEventListener("click", (e) => {
     opValue = 0;
     
 });
+
