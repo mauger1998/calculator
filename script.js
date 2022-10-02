@@ -71,8 +71,13 @@ operators.forEach(operator => {
     operator.addEventListener("click", (e) => {
         if (firstValue != null && secondValue != null) {
             userIsStillTyping = false;
-            display.textContent = operate(parseInt(firstValue), e.target.innerText, parseInt(secondValue));
+            display.textContent = operate(parseInt(firstValue), opValue, parseInt(secondValue));
+            
             secondValue = parseInt(display.textContent);
+            opValue = e.target.innerText
+            
+            
+            
         } else {
             userIsStillTyping = false;
             opValue = e.target.innerText;
