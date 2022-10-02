@@ -34,7 +34,7 @@ const numbers = document.querySelectorAll("[date-number]");
 const display = document.querySelector(".display");
 const operators = document.querySelectorAll("[data-operation]")
 const equals = document.getElementById("equal");
-
+const clear = document.getElementById("clear");
 
 //operators.forEach(operator => {
    // operator.addEventListener("click", (e) => {
@@ -83,3 +83,8 @@ equals.addEventListener("click", (e) => {
     userIsStillTyping = false;
     display.textContent = operate(parseInt(firstValue), opValue, parseInt(secondValue));
 });
+
+clear.addEventListener("click", (e) => {
+    display.textContent = "_";
+    
+})
