@@ -36,18 +36,16 @@ const operators = document.querySelectorAll("[data-operation]")
 const equals = document.getElementById("equal");
 const clear = document.getElementById("clear");
 
-//operators.forEach(operator => {
-   // operator.addEventListener("click", (e) => {
-    //    display.textContent = operator.innerText;
-  //  })
-//});
-let firstValue = 0;
-let secondValue = 0;
+
+let firstValue = null;
+let secondValue = null;
 let opValue = 0;
 let userIsStillTyping = false;
 
 
-  
+ 
+/*Number Buttons */
+
     numbers.forEach(button => {
     button.addEventListener("click", (e) => {
         if (userIsStillTyping == false) {
@@ -67,28 +65,38 @@ let userIsStillTyping = false;
 
 
 
-
+/*Operators*/
 
 operators.forEach(operator => {
     operator.addEventListener("click", (e) => {
-        userIsStillTyping = false;
-        opValue = e.target.innerText;
-        secondValue = firstValue;
-        console.log(opValue);
+        if (firstValue != null && secondValue != null) {
+            userIsStillTyping = false;
+            display.textContent = operate(parseInt(firstValue), e.target.innerText, parseInt(secondValue));
+            secondValue = parseInt(display.textContent);
+        } else {
+            userIsStillTyping = false;
+            opValue = e.target.innerText;
+            secondValue = firstValue;
+        }
 
+        
     })
 });
 
+
+/*Equals Button*/
 equals.addEventListener("click", (e) => {
     userIsStillTyping = false;
     display.textContent = operate(parseInt(firstValue), opValue, parseInt(secondValue));
 });
 
+/*Clear Button*/
+
 clear.addEventListener("click", (e) => {
     display.textContent = "_";
     userIsStillTyping = false;
-    firstValue = 0;
-    secondValue = 0;
+    firstValue = null;
+    secondValue = null;
     opValue = 0;
     
 });
